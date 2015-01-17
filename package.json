@@ -2,10 +2,31 @@
   "name": "utils",
   "private": true,
   "version": "0.0.0",
-  "dependencies": {
-      "chai": "~1.8.0"
-  },
+  "description": "dronePass-DB module for Tower and Planner",
+  "main": "./server/server.js",
   "scripts": {
-    "test": "mocha ./spec/utils.js"
+    "pretest": "echo PRE TEST SCRIPTS; ./data/dptest_setup.sh;",
+    "test": "mocha ./spec/utils.js || :",
+    "posttest": "echo POST TEST SCRIPTS; "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codestork/dronePass-DB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codestork/dronePass-DB/issues"
+  },
+  "homepage": "https://github.com/codestork/dronePass-DB",  
+  "dependencies": {
+    "config": "^1.10.0",
+    "knex": "^0.7.3",
+    "knex-postgis": "^0.1.2",
+    "pg": "^4.2.0"
+  },
+  "devDependencies": {
+    "chai": "~1.8.0",
+    "chai-as-promised": "^4.1.1"
   }
 }
