@@ -1,1 +1,5 @@
 node_modules/
+TestPaths.*
+parcel_v*
+dump_test_data.sql
+
